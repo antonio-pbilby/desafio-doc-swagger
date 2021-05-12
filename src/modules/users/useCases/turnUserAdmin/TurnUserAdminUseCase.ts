@@ -12,7 +12,7 @@ class TurnUserAdminUseCase {
     // Complete aqui
     const user = this.usersRepository.findById(user_id);
 
-    if (!user) throw new Error("Users does not exists");
+    if (!user) throw new Error("Users does not exist");
 
     const newUser = this.usersRepository.turnAdmin(user);
     return newUser;

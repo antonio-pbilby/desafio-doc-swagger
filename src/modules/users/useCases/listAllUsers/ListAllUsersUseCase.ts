@@ -12,7 +12,7 @@ class ListAllUsersUseCase {
     // Complete aqui
     const user = this.usersRepository.findById(user_id);
 
-    if (!user) throw new Error("User does not exist");
+    if (!user) throw new Error("User is not authorized!");
 
     if (!user.admin) throw new Error("User is not authorized!");
 
